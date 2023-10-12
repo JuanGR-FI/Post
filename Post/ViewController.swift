@@ -44,7 +44,7 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         currentId = getConfig(key: Constants.currentIdKey) as? Int16 ?? 0
-        print("Current id in BD: ", currentId)
+        //print("Current id in BD: ", currentId)
     }
     
     @IBAction func unwindFromPostDetail(segue: UIStoryboardSegue) {
@@ -92,6 +92,7 @@ class ViewController: UIViewController {
             postService.updatePost(post: auxPost!){ updatedPost in //Updating post in Remote Server
                 if let post = updatedPost {
                     //print("updated post: ", post)
+                    self.auxPost = post
                     
                     //Updating in BD
                     do{
@@ -126,7 +127,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! PostCell
         
         cell.titleLabel.text = postManager?.getPost(at: indexPath.row).title
-        cell.idLabel.text = String(Int((postManager?.getPost(at: indexPath.row).id)!))
+        cell.idLabel.text = "id: " + String(Int((postManager?.getPost(at: indexPath.row).id)!))
         
         return cell
         
