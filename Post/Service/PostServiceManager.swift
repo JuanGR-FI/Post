@@ -144,7 +144,27 @@ class PostServiceManager {
     
     
     //DELETE
-    
-    
+    func deletePost(id: Int, completion: @escaping (Int) -> Void) {
+        let urlString = Constants.postURL + String(id)
+        print("urlString:", urlString)
+        
+        guard let url = URL(string: urlString) else {
+            completion(0)
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                completion(response.statusCode)
+            } else if let error = error {
+                print("Error:", error)
+                completion(0)
+            }
+        }
+        task.resume()
+    }
     
 }

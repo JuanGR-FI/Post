@@ -13,8 +13,7 @@ class AddPostViewController: UIViewController {
     
     var postManager: PostDataManager?
     
-    var postDetail: MyPost?
-    
+    var postDetail: Post?
     
     @IBOutlet var titleTextView: UITextView!
     @IBOutlet var bodyTextView: UITextView!
@@ -30,7 +29,11 @@ class AddPostViewController: UIViewController {
             titleTextView.text = postDetail?.title
             bodyTextView.text = postDetail?.body
         }else {
-            postDetail = MyPost(id: nil, title: "", body: "", userId: Int16.random(in: 1...10))
+            //postDetail = MyPost(id: nil, title: "", body: "", userId: Int16.random(in: 1...10))
+            postDetail = Post(context: context)
+            postDetail?.title = ""
+            postDetail?.body = ""
+            postDetail?.userId = Int16.random(in: 1...10)
         }
     }
     

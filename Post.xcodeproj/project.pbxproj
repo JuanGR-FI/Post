@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8838FE42AD6503D00887255 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8838FE32AD6503D00887255 /* ViewControllerExtension.swift */; };
 		A8979D742AD4DCD2004EAC0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8979D732AD4DCD2004EAC0A /* AppDelegate.swift */; };
 		A8979D762AD4DCD2004EAC0A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8979D752AD4DCD2004EAC0A /* SceneDelegate.swift */; };
 		A8979D782AD4DCD2004EAC0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8979D772AD4DCD2004EAC0A /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A8838FE32AD6503D00887255 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		A8979D702AD4DCD2004EAC0A /* Post.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Post.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8979D732AD4DCD2004EAC0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8979D752AD4DCD2004EAC0A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			children = (
 				A8979D992AD4E5E6004EAC0A /* UIViewExtension.swift */,
 				A8979D9B2AD4E603004EAC0A /* CGColorExtension.swift */,
+				A8838FE32AD6503D00887255 /* ViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				A8979DA92AD4F4A7004EAC0A /* Post+CoreDataClass.swift in Sources */,
 				A8979DA62AD4F210004EAC0A /* PostCell.swift in Sources */,
 				A8979D742AD4DCD2004EAC0A /* AppDelegate.swift in Sources */,
+				A8838FE42AD6503D00887255 /* ViewControllerExtension.swift in Sources */,
 				A8979D762AD4DCD2004EAC0A /* SceneDelegate.swift in Sources */,
 				A8979D9C2AD4E603004EAC0A /* CGColorExtension.swift in Sources */,
 				A8979D9E2AD4E75C004EAC0A /* AddPostViewController.swift in Sources */,

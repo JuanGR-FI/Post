@@ -69,6 +69,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="postTableView" destination="URK-Mf-43Y" id="y4D-NP-3oR"/>
                         <segue destination="Xga-Jc-UxL" kind="show" identifier="showPostSegue" id="wpm-Jz-3TW"/>
                     </connections>
                 </viewController>
